@@ -1,0 +1,132 @@
+/* master syles*/
+
+body {
+  font-family: "Public Sans", sans-serif;
+  margin: 0px;
+}
+
+.headMenu {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/* nav syles*/
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 38px;
+}
+
+.leftMenu {
+  display: flex;
+}
+
+.navigation > .leftMenu > div {
+  margin-right: 20px;
+  /*it's 90% of the font size*/
+  font-size: 0.9em;
+  text-transform: uppercase;
+}
+
+.navigationLinkWrapper {
+  height: 22px;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.5s;
+}
+
+.navigationLinkWrapper a {
+  color: #8a8a8a;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+/* makes the line under text black when hover over it*/
+.navigationLinkWrapper:hover {
+  border-bottom: 1px solid black;
+}
+/* makes the text black when hover over it*/
+.navigationLinkWrapper a:hover {
+  color: black;
+}
+
+.activeNavigationLink {
+  border-bottom: 1px solid black;
+}
+
+.activeNavigationLink a {
+  color: black !important;
+}
+
+/* portfolio syles*/
+
+.portfolioItems {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.portfolioItem {
+  position: relative;
+}
+
+.portfolioImageBackground {
+  height: 400px;
+  width: 100%;
+  /*it crops the images so all of them have the size*/
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.imageTextWrapper {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.logoWrapper img {
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+/* needs to be more specific with selector*/
+
+.imageTextWrapper .subtitle {
+  transition: 1s;
+  /*if you do not have the same style, if will feel bad when hovered*/
+  font-weight: 600;
+  color: transparent;
+}
+
+.imageTextWrapper:hover .subtitle {
+  font-weight: 600;
+  color: lightsteelblue;
+}
+
+.darkenImage {
+  transition: 1s;
+  filter: brightness(5%);
+}
+
+.brightenImage {
+  transition: 1s;
+  filter: brightness(100%);
+}
+
+/* about page style*/
+img {
+  padding: 30px;
+  border-radius: 75px;
+}
+h1 {
+  padding: 30px;
+}
+
+.brand {
+  text-transform: uppercase;
+}
